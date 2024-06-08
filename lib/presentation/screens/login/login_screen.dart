@@ -6,6 +6,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,6 +28,50 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(height: 16),
+            Container(
+              margin: const EdgeInsets.only(left: 16, right: 16),
+              height: 28,
+              decoration: const BoxDecoration(
+                color: Colors.black12,
+                borderRadius: BorderRadius.all(Radius.circular(8)),
+              ),
+              child: Row(
+                children: [
+                  const SizedBox(width: 2),
+                  Expanded(
+                    child: Container(
+                      height: 24,
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                      ),
+                      alignment: Alignment.center,
+                      child: const Text(
+                        'Fizička lica',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      height: 24,
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                      ),
+                      alignment: Alignment.center,
+                      child: const Text(
+                        'Pravna lica',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 2),
+                ],
+              ),
+            ),
+            const SizedBox(height: 40),
             const Padding(
               padding: EdgeInsets.only(left: 32),
               child: Row(
