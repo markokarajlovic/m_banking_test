@@ -72,17 +72,21 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 40),
-            const Padding(
-              padding: EdgeInsets.only(left: 32),
+            Padding(
+              padding: const EdgeInsets.only(left: 32),
               child: Row(
                 children: [
-                  SizedBox(
-                    width: 32,
-                    height: 32,
-                    child: Placeholder(),
+                  DecoratedBox(
+                    position: DecorationPosition.foreground,
+                    decoration: BoxDecoration(border: Border.all(color: Colors.black)),
+                    child: Image.asset(
+                      'assets/icons/raiffeisen_bank_icon.jpeg',
+                      width: 32,
+                      height: 32,
+                    ),
                   ),
-                  SizedBox(width: 8),
-                  Text(
+                  const SizedBox(width: 8),
+                  const Text(
                     'Raiffeisen\nBank',
                     style: TextStyle(
                       fontSize: 20,
