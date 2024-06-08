@@ -13,4 +13,7 @@ en-US)
 [✓] Connected device (3 available)
 [✓] Network resources
 
+## easy_localization
 
+flutter pub run easy_localization:generate --source-dir assets/translations
+flutter pub run easy_localization:generate -f keys -o locale_keys.g.dart --source-dir assets/translations

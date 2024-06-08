@@ -1,0 +1,10 @@
+{
+  "bank_name": "Raiffeisen\nBank",
+  "personal_banking": "Individuals",
+  "business_banking": "Legal entities",
+  "welcome_text": "Welcome",
+  "personal_banking_description": "My mBank\nfor the population",
+  "business_banking_description": "My mBank\nThe business",
+  "easy_use_description": "Swift, easy and secure",
+  "login_button_text": "Log in"
+}

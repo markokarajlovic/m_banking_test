@@ -47,8 +47,8 @@ class LoginScreen extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(8)),
                       ),
                       alignment: Alignment.center,
-                      child: const Text(
-                        'Fizička lica',
+                      child: Text(
+                        LocaleKeys.personal_banking.tr(),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -61,8 +61,8 @@ class LoginScreen extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(8)),
                       ),
                       alignment: Alignment.center,
-                      child: const Text(
-                        'Pravna lica',
+                      child: Text(
+                        LocaleKeys.business_banking.tr(),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -86,9 +86,9 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 8),
-                  const Text(
-                    'Raiffeisen\nBank',
-                    style: TextStyle(
+                  Text(
+                    LocaleKeys.bank_name.tr(),
+                    style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       height: 0.9,
@@ -98,32 +98,32 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
             const Spacer(),
-            const Padding(
-              padding: EdgeInsets.only(left: 32, bottom: 8),
+            Padding(
+              padding: const EdgeInsets.only(left: 32, bottom: 8),
               child: Text(
-                'DOBRO DOŠLI',
-                style: TextStyle(
+                LocaleKeys.welcome_text.tr().toUpperCase(),
+                style: const TextStyle(
                   fontSize: 19,
                   fontWeight: FontWeight.w300,
                 ),
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 32, bottom: 16),
+            Padding(
+              padding: const EdgeInsets.only(left: 32, bottom: 16),
               child: Text(
-                'Moja mBanka\nza stanovništvo',
-                style: TextStyle(
+                LocaleKeys.personal_banking_description.tr(),
+                style: const TextStyle(
                   fontSize: 32,
                   fontWeight: FontWeight.w600,
                   height: 0.9,
                 ),
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 32, bottom: 16),
+            Padding(
+              padding: const EdgeInsets.only(left: 32, bottom: 16),
               child: Text(
-                'Brzo, lako i sigurno',
-                style: TextStyle(color: Colors.black54),
+                LocaleKeys.easy_use_description.tr(),
+                style: const TextStyle(color: Colors.black54),
               ),
             ),
             Padding(
@@ -136,7 +136,9 @@ class LoginScreen extends StatelessWidget {
                       foregroundColor: Colors.black,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))),
                   onPressed: () {},
-                  child: const Text('Uloguj se'),
+                  child: Text(
+                    LocaleKeys.login_button_text.tr(),
+                  ),
                 ),
               ),
             ),

@@ -1,0 +1,10 @@
+{
+  "bank_name": "Raiffeisen\nBank",
+  "personal_banking": "Fizička lica",
+  "business_banking": "Pravna Lica",
+  "welcome_text": "Dobro Došli",
+  "personal_banking_description": "Moja mBanka\nza stanovništvo",
+  "business_banking_description": "Moja mBanka\nBiznis",
+  "easy_use_description": "Brzo, lako i sigurno",
+  "login_button_text": "Uloguj se"
+}
