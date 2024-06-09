@@ -13,22 +13,29 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 16, top: 16),
-                  child: DropdownButtonHideUnderline(
-                    child: DropdownButton<LanguageEnum>(
-                      value: LanguageEnum.srb,
-                      icon: const Icon(Icons.keyboard_arrow_down),
-                      style: const TextStyle(color: Colors.black, fontSize: 16),
-                      onChanged: (LanguageEnum? value) {},
-                      items: LanguageEnum.values.map<DropdownMenuItem<LanguageEnum>>((LanguageEnum value) {
-                        return DropdownMenuItem<LanguageEnum>(
-                          value: value,
-                          child: Text(value.title),
-                        );
-                      }).toList(),
-                    ),
-                  ),
+                BlocSelector<AppCubit, AppState, LanguageEnum>(
+                  selector: (state) => state.languageEnum,
+                  builder: (context, selector) {
+                    return Padding(
+                      padding: const EdgeInsets.only(left: 16, top: 16),
+                      child: DropdownButtonHideUnderline(
+                        child: DropdownButton<LanguageEnum>(
+                          value: selector,
+                          icon: const Icon(Icons.keyboard_arrow_down),
+                          style: const TextStyle(color: Colors.black, fontSize: 16),
+                          onChanged: (LanguageEnum? value) {
+                            context.read<AppCubit>().setLanguage(value, context);
+                          },
+                          items: LanguageEnum.values.map<DropdownMenuItem<LanguageEnum>>((LanguageEnum value) {
+                            return DropdownMenuItem<LanguageEnum>(
+                              value: value,
+                              child: Text(value.title),
+                            );
+                          }).toList(),
+                        ),
+                      ),
+                    );
+                  },
                 ),
                 const SizedBox(height: 16),
                 Container(
@@ -97,8 +104,7 @@ class LoginScreen extends StatelessWidget {
                       DecoratedBox(
                         position: DecorationPosition.foreground,
                         decoration: BoxDecoration(border: Border.all(color: Colors.black)),
-                        child: Image.asset(
-                          'assets/icons/raiffeisen_bank_icon.jpeg',
+                        child: Assets.icons.raiffeisenBankIcon.image(
                           width: 32,
                           height: 32,
                         ),
