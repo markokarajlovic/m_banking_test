@@ -19,11 +19,12 @@ class SplashScreen extends StatelessWidget {
     );
   }
 
-  void _init(BuildContext context) async {
+  void _init(BuildContext context) {
     // some initializations goes here then remove delay
-    await Future.delayed(const Duration(seconds: 2));
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      context.goNamed(NavigationRoutes.login.name);
-    });
+    Future.delayed(const Duration(seconds: 2)).then(
+      (_) {
+        context.goNamed(NavigationRoutes.login.name);
+      },
+    );
   }
 }

@@ -12,11 +12,45 @@ import 'package:flutter/widgets.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/bottom_bar_ips.png
+  AssetGenImage get bottomBarIps => const AssetGenImage('assets/icons/bottom_bar_ips.png');
+
+  /// File path: assets/icons/bottom_bar_login_selected.png
+  AssetGenImage get bottomBarLoginSelected => const AssetGenImage('assets/icons/bottom_bar_login_selected.png');
+
+  /// File path: assets/icons/bottom_bar_login_unselected.png
+  AssetGenImage get bottomBarLoginUnselected => const AssetGenImage('assets/icons/bottom_bar_login_unselected.png');
+
+  /// File path: assets/icons/bottom_bar_other_selected.png
+  AssetGenImage get bottomBarOtherSelected => const AssetGenImage('assets/icons/bottom_bar_other_selected.png');
+
+  /// File path: assets/icons/bottom_bar_other_unselected.png
+  AssetGenImage get bottomBarOtherUnselected => const AssetGenImage('assets/icons/bottom_bar_other_unselected.png');
+
+  /// File path: assets/icons/bottom_bar_support_selected.png
+  AssetGenImage get bottomBarSupportSelected => const AssetGenImage('assets/icons/bottom_bar_support_selected.png');
+
+  /// File path: assets/icons/bottom_bar_support_unselected.png
+  AssetGenImage get bottomBarSupportUnselected => const AssetGenImage('assets/icons/bottom_bar_support_unselected.png');
+
+  /// File path: assets/icons/bottom_bar_token.png
+  AssetGenImage get bottomBarToken => const AssetGenImage('assets/icons/bottom_bar_token.png');
+
   /// File path: assets/icons/raiffeisen_bank_icon.jpeg
   AssetGenImage get raiffeisenBankIcon => const AssetGenImage('assets/icons/raiffeisen_bank_icon.jpeg');
 
   /// List of all assets
-  List<AssetGenImage> get values => [raiffeisenBankIcon];
+  List<AssetGenImage> get values => [
+        bottomBarIps,
+        bottomBarLoginSelected,
+        bottomBarLoginUnselected,
+        bottomBarOtherSelected,
+        bottomBarOtherUnselected,
+        bottomBarSupportSelected,
+        bottomBarSupportUnselected,
+        bottomBarToken,
+        raiffeisenBankIcon
+      ];
 }
 
 class $AssetsTranslationsGen {

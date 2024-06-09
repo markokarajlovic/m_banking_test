@@ -22,7 +22,12 @@ class CodegenLoader extends AssetLoader{
   "personal_banking_description": "My mBank\nfor the population",
   "business_banking_description": "My mBank\nThe business",
   "easy_use_description": "Swift, easy and secure",
-  "login_button_text": "Log in"
+  "login_button_text": "Log in",
+  "bottom_nav_bar_login": "Login",
+  "bottom_nav_bar_token": "Token",
+  "bottom_nav_bar_ips": "IPS",
+  "bottom_nav_bar_support": "Support",
+  "bottom_nav_bar_other": "Other"
 };
 static const Map<String,dynamic> sr = {
   "bank_name": "Raiffeisen\nBank",
@@ -32,7 +37,12 @@ static const Map<String,dynamic> sr = {
   "personal_banking_description": "Moja mBanka\nza stanovništvo",
   "business_banking_description": "Moja mBanka\nBiznis",
   "easy_use_description": "Brzo, lako i sigurno",
-  "login_button_text": "Uloguj se"
+  "login_button_text": "Uloguj se",
+  "bottom_nav_bar_login": "Prijava",
+  "bottom_nav_bar_token": "Token",
+  "bottom_nav_bar_ips": "IPS",
+  "bottom_nav_bar_support": "Podrška",
+  "bottom_nav_bar_other": "Ostalo"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "sr": sr};
 }

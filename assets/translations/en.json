@@ -6,5 +6,10 @@
   "personal_banking_description": "My mBank\nfor the population",
   "business_banking_description": "My mBank\nThe business",
   "easy_use_description": "Swift, easy and secure",
-  "login_button_text": "Log in"
+  "login_button_text": "Log in",
+  "bottom_nav_bar_login": "Login",
+  "bottom_nav_bar_token": "Token",
+  "bottom_nav_bar_ips": "IPS",
+  "bottom_nav_bar_support": "Support",
+  "bottom_nav_bar_other": "Other"
 }
