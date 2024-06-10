@@ -11,5 +11,8 @@
   "bottom_nav_bar_token": "Token",
   "bottom_nav_bar_ips": "IPS",
   "bottom_nav_bar_support": "Support",
-  "bottom_nav_bar_other": "Other"
+  "bottom_nav_bar_other": "Other",
+  "biometric_description": "Please authenticate",
+  "user_fail_to_authenticate_message": "User fail to authenticate",
+  "device_do_not_support_biometric_message": "Device do not support biometric"
 }

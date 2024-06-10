@@ -27,7 +27,10 @@ class CodegenLoader extends AssetLoader{
   "bottom_nav_bar_token": "Token",
   "bottom_nav_bar_ips": "IPS",
   "bottom_nav_bar_support": "Support",
-  "bottom_nav_bar_other": "Other"
+  "bottom_nav_bar_other": "Other",
+  "biometric_description": "Please authenticate",
+  "user_fail_to_authenticate_message": "User fail to authenticate",
+  "device_do_not_support_biometric_message": "Device do not support biometric"
 };
 static const Map<String,dynamic> sr = {
   "bank_name": "Raiffeisen\nBank",
@@ -42,7 +45,10 @@ static const Map<String,dynamic> sr = {
   "bottom_nav_bar_token": "Token",
   "bottom_nav_bar_ips": "IPS",
   "bottom_nav_bar_support": "Podrška",
-  "bottom_nav_bar_other": "Ostalo"
+  "bottom_nav_bar_other": "Ostalo",
+  "biometric_description": "Molimo potvrdite autentičnost",
+  "user_fail_to_authenticate_message": "Korisnik nije uspeo da se autentifikuje",
+  "device_do_not_support_biometric_message": "Uređaj ne podržava biometriju"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "sr": sr};
 }

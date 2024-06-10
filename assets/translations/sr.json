@@ -11,5 +11,8 @@
   "bottom_nav_bar_token": "Token",
   "bottom_nav_bar_ips": "IPS",
   "bottom_nav_bar_support": "Podrška",
-  "bottom_nav_bar_other": "Ostalo"
+  "bottom_nav_bar_other": "Ostalo",
+  "biometric_description": "Molimo potvrdite autentičnost",
+  "user_fail_to_authenticate_message": "Korisnik nije uspeo da se autentifikuje",
+  "device_do_not_support_biometric_message": "Uređaj ne podržava biometriju"
 }

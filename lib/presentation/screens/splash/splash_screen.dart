@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:local_auth/local_auth.dart';
 import 'package:m_banking_test/config/navigation.dart';
 import 'package:m_banking_test/generated/assets.gen.dart';
 
@@ -19,7 +20,7 @@ class SplashScreen extends StatelessWidget {
     );
   }
 
-  void _init(BuildContext context) {
+  void _init(BuildContext context) async {
     // some initializations goes here then remove delay
     Future.delayed(const Duration(seconds: 2)).then(
       (_) {

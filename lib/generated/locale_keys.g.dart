@@ -14,5 +14,8 @@ abstract class  LocaleKeys {
   static const bottom_nav_bar_ips = 'bottom_nav_bar_ips';
   static const bottom_nav_bar_support = 'bottom_nav_bar_support';
   static const bottom_nav_bar_other = 'bottom_nav_bar_other';
+  static const biometric_description = 'biometric_description';
+  static const user_fail_to_authenticate_message = 'user_fail_to_authenticate_message';
+  static const device_do_not_support_biometric_message = 'device_do_not_support_biometric_message';
 
 }

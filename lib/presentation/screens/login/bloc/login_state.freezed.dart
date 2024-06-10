@@ -16,6 +16,8 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$LoginState {
+  LoginStateStatus get status => throw _privateConstructorUsedError;
+  String? get errorMessage => throw _privateConstructorUsedError;
   bool get isIndividuals => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -29,7 +31,8 @@ abstract class $LoginStateCopyWith<$Res> {
           LoginState value, $Res Function(LoginState) then) =
       _$LoginStateCopyWithImpl<$Res, LoginState>;
   @useResult
-  $Res call({bool isIndividuals});
+  $Res call(
+      {LoginStateStatus status, String? errorMessage, bool isIndividuals});
 }
 
 /// @nodoc
@@ -45,9 +48,19 @@ class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? status = null,
+    Object? errorMessage = freezed,
     Object? isIndividuals = null,
   }) {
     return _then(_value.copyWith(
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as LoginStateStatus,
+      errorMessage: freezed == errorMessage
+          ? _value.errorMessage
+          : errorMessage // ignore: cast_nullable_to_non_nullable
+              as String?,
       isIndividuals: null == isIndividuals
           ? _value.isIndividuals
           : isIndividuals // ignore: cast_nullable_to_non_nullable
@@ -64,7 +77,8 @@ abstract class _$$LoginStateImplCopyWith<$Res>
       __$$LoginStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool isIndividuals});
+  $Res call(
+      {LoginStateStatus status, String? errorMessage, bool isIndividuals});
 }
 
 /// @nodoc
@@ -78,9 +92,19 @@ class __$$LoginStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? status = null,
+    Object? errorMessage = freezed,
     Object? isIndividuals = null,
   }) {
     return _then(_$LoginStateImpl(
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as LoginStateStatus,
+      errorMessage: freezed == errorMessage
+          ? _value.errorMessage
+          : errorMessage // ignore: cast_nullable_to_non_nullable
+              as String?,
       isIndividuals: null == isIndividuals
           ? _value.isIndividuals
           : isIndividuals // ignore: cast_nullable_to_non_nullable
@@ -92,15 +116,24 @@ class __$$LoginStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$LoginStateImpl extends _LoginState {
-  const _$LoginStateImpl({this.isIndividuals = true}) : super._();
+  const _$LoginStateImpl(
+      {this.status = LoginStateStatus.init,
+      this.errorMessage,
+      this.isIndividuals = true})
+      : super._();
 
+  @override
+  @JsonKey()
+  final LoginStateStatus status;
+  @override
+  final String? errorMessage;
   @override
   @JsonKey()
   final bool isIndividuals;
 
   @override
   String toString() {
-    return 'LoginState(isIndividuals: $isIndividuals)';
+    return 'LoginState(status: $status, errorMessage: $errorMessage, isIndividuals: $isIndividuals)';
   }
 
   @override
@@ -108,12 +141,16 @@ class _$LoginStateImpl extends _LoginState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LoginStateImpl &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.errorMessage, errorMessage) ||
+                other.errorMessage == errorMessage) &&
             (identical(other.isIndividuals, isIndividuals) ||
                 other.isIndividuals == isIndividuals));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, isIndividuals);
+  int get hashCode =>
+      Object.hash(runtimeType, status, errorMessage, isIndividuals);
 
   @JsonKey(ignore: true)
   @override
@@ -123,9 +160,16 @@ class _$LoginStateImpl extends _LoginState {
 }
 
 abstract class _LoginState extends LoginState {
-  const factory _LoginState({final bool isIndividuals}) = _$LoginStateImpl;
+  const factory _LoginState(
+      {final LoginStateStatus status,
+      final String? errorMessage,
+      final bool isIndividuals}) = _$LoginStateImpl;
   const _LoginState._() : super._();
 
+  @override
+  LoginStateStatus get status;
+  @override
+  String? get errorMessage;
   @override
   bool get isIndividuals;
   @override

@@ -1,8 +1,10 @@
+import 'package:either_dart/either.dart';
 import 'package:injectable/injectable.dart';
 import 'package:m_banking_test/data/data_source/login_local_datasource.dart';
+import 'package:m_banking_test/data/models/error/failure.dart';
 
 abstract class LoginRepository {
-  void startLogin() {}
+  Future<Either<Failure, bool>> startLogin();
 }
 
 @Named('LoginRepository')
@@ -15,7 +17,7 @@ class LoginRepositoryImpl implements LoginRepository {
   }) : _loginLocalDatasource = loginLocalDatasource;
 
   @override
-  void startLogin() {
-    _loginLocalDatasource.startLogin();
+  Future<Either<Failure, bool>> startLogin() async {
+    return await _loginLocalDatasource.startLogin();
   }
 }
