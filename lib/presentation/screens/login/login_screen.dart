@@ -47,7 +47,7 @@ class LoginScreen extends StatelessWidget {
               PrimaryButton(
                 margin: const EdgeInsets.symmetric(horizontal: 16),
                 text: LocaleKeys.login_button_text.tr(),
-                onTap: () {},
+                onTap: context.read<LoginCubit>().startLogin,
               ),
               const Gap(32),
             ],
