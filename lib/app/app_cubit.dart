@@ -5,9 +5,25 @@ import 'package:injectable/injectable.dart';
 import 'package:m_banking_test/app/app_state.dart';
 import 'package:m_banking_test/data/enums/language_enum.dart';
 
-@LazySingleton()
+@injectable
 class AppCubit extends Cubit<AppState> {
   AppCubit() : super(const AppState());
+
+  void init(BuildContext context) {
+    final locale = context.locale;
+    if (locale.languageCode == 'en') {
+      emit(state.copyWith(
+        languageEnum: LanguageEnum.eng,
+        currentLocale: const Locale('en'),
+      ));
+    }
+    if (locale.languageCode == 'sr') {
+      emit(state.copyWith(
+        languageEnum: LanguageEnum.srb,
+        currentLocale: const Locale('sr'),
+      ));
+    }
+  }
 
   void setLanguage(LanguageEnum? value, BuildContext context) async {
     switch (value) {

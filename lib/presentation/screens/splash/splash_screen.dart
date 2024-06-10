@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:local_auth/local_auth.dart';
 import 'package:m_banking_test/config/navigation.dart';
 import 'package:m_banking_test/generated/assets.gen.dart';
 

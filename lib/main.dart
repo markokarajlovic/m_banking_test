@@ -25,7 +25,6 @@ void main() async {
       path: 'assets/translations',
       supportedLocales: const [Locale('en'), Locale('sr')],
       useOnlyLangCode: true,
-      startLocale: const Locale('sr'),
       child: const MyApp(),
     ),
   );
@@ -38,7 +37,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        InjectedBlocProvider<AppCubit>(),
+        BlocProvider<AppCubit>(
+          create: (_) {
+            return getIt<AppCubit>()..init(context);
+          },
+        ),
         InjectedBlocProvider<LoginCubit>(),
       ],
       child: BlocBuilder<AppCubit, AppState>(
